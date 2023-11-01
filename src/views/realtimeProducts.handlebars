@@ -1,0 +1,27 @@
+<div>
+  <ul id="product-list">
+    {{#each productos}}
+    <li>{{this.id}}</li>
+    <li>{{this.title}}</li>
+    <li>{{this.category}}</li>
+    <li>{{this.description}}</li>
+    <li>{{this.price}}</li>
+    <li>{{this.code}}</li>
+    <li>{{this.stock}}</li>
+    {{/each}}
+    {{!-- <li>{{this.thumbnail}}</li> --}}
+
+  </ul>
+  <form id="form-product">
+    <input type="text" id="product-id" placeholder="Id">
+    <input type="text" id="product-title" placeholder="Titulo">
+    <input type="text" id="product-category" placeholder="Categoría">
+    <input type="text" id="product-description" placeholder="Descripción">
+    <input type="text" id="product-price" placeholder="Precio">
+    <input type="text" id="product-code" placeholder="Código">
+    <input type="text" id="product-stock" placeholder="Stock">
+    <button type="submit">Agregar Producto</button>
+  </form>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/index.js"></script>

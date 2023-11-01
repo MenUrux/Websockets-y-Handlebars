@@ -1,0 +1,13 @@
+<div class=".container-fluid">
+  <div class="grid">
+    {{#each products}}
+    <article>
+      <header>{{this.productName}}</header>
+      <img src="{{this.productImg}}" alt="{{this.productName}}" class="product-image" />
+      <button data-tooltip="Agregar a carrito"><i class="fi fi-rr-shopping-cart-add"></i></button>
+    </article>
+    {{/each}}
+  </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/index.js"></script>
